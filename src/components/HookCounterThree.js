@@ -17,14 +17,13 @@ function HookCounterThree(...props) {
         type="text"
         name = "FirstName"
         value={user.FirstName}
-        onChange={(e) => setUser({ ...user,FirstName: e.target.value })}
+        onChange={(e) => setUser({FirstName: e.target.value })}
       >
       </input>
       <input
         type="text"
-        value={user.LastName}
-        // spread operatör ... user
-        onChange={(e) => setUser({...user, LastName: e.target.value })}
+        value={user.LastName} 
+        onChange={(e) => setUser({ LastName: e.target.value })}
       >
       </input>
       <input
@@ -37,7 +36,7 @@ function HookCounterThree(...props) {
 
       <h2>Your FirstName : {user.FirstName}</h2>
       <h2>Your LastName  : {user.LastName} </h2>
-      <h2>{JSON.stringify(user)}</h2>
+      <h2>{JSON.stringify(user)} </h2>
     </div>
   );
 }
