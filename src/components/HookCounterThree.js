@@ -17,13 +17,13 @@ function HookCounterThree(...props) {
         type="text"
         name = "FirstName"
         value={user.FirstName}
-        onChange={(e) => setUser({FirstName: e.target.value })}
+        onChange={(e) => setUser({...user,FirstName: e.target.value })}
       >
       </input>
       <input
         type="text"
         value={user.LastName} 
-        onChange={(e) => setUser({ LastName: e.target.value })}
+        onChange={(e) => setUser({...user, LastName: e.target.value })}
       >
       </input>
       <input
