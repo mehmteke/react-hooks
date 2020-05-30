@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import HookCounterFour from "./components/HookCounterFour";
+import ClassCountOne from "./components/ClassCountOne"
 function App() {
   return (
     <div className="App">
-       <HookCounterFour></HookCounterFour>
+       <ClassCountOne></ClassCountOne>
     </div>
   );
 }
