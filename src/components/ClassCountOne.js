@@ -11,23 +11,23 @@ import React, { Component } from 'react'
     }
     
     componentDidMount() {
-       console.log("componentDidMount") 
+        console.log("componentDidMount")
+       document.title = `Clicked ${this.state.count} times`
     }
 
     componentDidUpdate(prevProps, prevState) {
         console.log("componentDidUpdate")
+        document.title = `Clicked ${this.state.count} times`
     }
     
    componentWillUnmount() {
-       console.log("componentWillUnmount")
    }
     
 
     render() {
-        console.log("Render")
         return (
             <div>
-                <button onClick = {() => {this.setState((previous) =>({...previous, count: this.state.count + 5}))}}> Change Count</button>
+                <button onClick = {() => {this.setState({count: this.state.count + 1 })}}> Click {this.state.count} times</button>
                 <h2>{JSON.stringify(this.state.count)}</h2>
             </div>
         )
